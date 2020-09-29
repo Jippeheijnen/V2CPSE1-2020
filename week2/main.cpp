@@ -1,4 +1,5 @@
 #include "note_player_gpio.hpp"
+#include "my_note_player.hpp"
 #include "fur_elise.hpp"
 #include "rtttl_player.hpp"
 #include <hwlib.hpp>
@@ -12,7 +13,7 @@ const char one[]          = "NumberOne:d=16,o=5,b=168:4f.,8c6,16b5,16c6,16b5,16c
 int main( void ){	
    
    auto pin = hwlib::target::pin_out(hwlib::target::pins::d10);
-   auto p = note_player_gpio(pin);
+   auto p = my_note_player(pin);
    hwlib::wait_ms( 10 );
    
    HWLIB_TRACE;
